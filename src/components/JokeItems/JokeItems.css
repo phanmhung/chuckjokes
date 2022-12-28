@@ -1,0 +1,56 @@
+.cards {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 8px 8px;
+  margin-top: 1rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.card:hover {
+  box-shadow: 3px 0px 15px 1px rgba(0, 0, 0, 0.49);
+}
+
+.text-joke {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: #5e5e5e;
+  margin-bottom: 1rem;
+  min-height: 160px;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.cardTitle h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #303030;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+.stats {
+  position: absolute;
+  bottom: 10%;
+  right: 8%;
+}
+.stats button {
+  background-color: transparent;
+  border: none;
+  color: #cfb995;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  margin-right: 0.8rem;
+}

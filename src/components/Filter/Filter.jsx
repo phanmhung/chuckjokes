@@ -1,18 +1,38 @@
 import React from 'react';
+import './Filter.css';
 
-function Filter({ list, filter }) {
-  console.log("🚀 ~ file: Filter.jsx:4 ~ Filter ~ list", list)
+export const backgroundColor = [
+  'red',
+  'pink',
+  'aqua',
+  'aquamarine',
+  'deepskyblue',
+  'goldenrod',
+  'gold',
+  'cyan',
+  'blue',
+  'blueviolet',
+  'brown',
+  'burlywood',
+  'cadetblue',
+  'chartreuse',
+  'chocolate',
+];
+
+function Filter({ list, selected, setSelected }) {
+  
   return (
-    <div className="main__btnGrid">
+    <div className="gridContainer">
       {list.map((cat, i) => {
         return (
           <button
             type="button"
-            className="main__button"
-            onClick={() => filter(cat)}
+            className="btn"
+            onClick={() => setSelected(cat)}
             key={i}
+            style={{ backgroundColor: backgroundColor[i] }}
           >
-            {cat}
+            {cat} Jokes
           </button>
         );
       })}

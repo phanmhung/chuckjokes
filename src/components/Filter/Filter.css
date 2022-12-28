@@ -1,0 +1,27 @@
+.gridContainer {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+   
+  }
+.btn {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 14px 0;
+    width: 206px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+  }
+
+.btn:hover {
+   color: lightslategray;
+    border-color: lightslategray;
+  }

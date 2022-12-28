@@ -4,9 +4,7 @@ import axios from "axios";
 export const JOKES_TYPE = {
     GET_ALL_JOKES: "GET_ALL_JOKES",
     GET_CATEGORIES: "GET_CATEGORIES",
-    GET_JOKES_BY_CATEGORY: "GET_JOKES_BY_CATEGORY",
     GET_JOKES_BY_SEARCH: "GET_JOKES_BY_SEARCH",
-    GET_JOKES_BY_RANDOM: "GET_JOKES_BY_RANDOM",
     LOADING_JOKES: "LOADING_JOKES",
     LOADING_CATEGORIES: "LOADING_CATEGORIES",
 }
@@ -23,7 +21,7 @@ export const getAllJokes = () => {
         })
         .then((response) => {
           dispatch({
-            type: JOKES_TYPE.GET_JOKES,
+            type: JOKES_TYPE.GET_ALL_JOKES,
             payload: response?.data,
           });
         })

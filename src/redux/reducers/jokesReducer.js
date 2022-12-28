@@ -8,7 +8,7 @@ const jokesReducer = (state = { jokes: [] }, action) => {
         error: null,
         jokes: [],
       });
-    case JOKES_TYPE.GET_JOKES:
+    case JOKES_TYPE.GET_ALL_JOKES:
       return Object.assign({}, state, {
         loading: false,
         jokes: action.payload.result,
