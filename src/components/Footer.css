@@ -1,0 +1,54 @@
+.footer {
+    background-image: url(../assets/assets_Homework_Front-End_01/bitmap_2@3x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+  
+  @media (min-width: 768px) {
+    .footer {
+      background-image: url(../assets/assets_Homework_Front-End_01/bitmap_2.png);
+    }
+  }
+  @media (min-width: 992px) {
+    .footer {
+      background-image: url(../assets/assets_Homework_Front-End_01/bitmap_2@2x.png);
+    }
+  }
+  @media (min-width: 1200px) {
+    .footer {
+      background-image: url(../assets/assets_Homework_Front-End_01/bitmap_2@3x.png);
+    }
+  }
+  
+  .footerText {
+    display: block;
+    padding: 30px 60px;
+  }
+  
+  .footerText h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+  }
+  
+  .footerText a {
+   
+    color: #d0ba93;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footerText a:hover {
+    background-color: transparent;
+  }
+  .submit-joke{
+
+  }
+  .footerText img {
+    width: 18px;
+  }
+  
