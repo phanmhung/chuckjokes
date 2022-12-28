@@ -1,1 +1,6 @@
-add page
+- Create react app with ( npx create-react-app ).
+- Prepare the assets and fonts needed for the project.
+- Make a repository component to put all website components in.
+- Build the components from the navbar until the footer.
+- Use react-routes-dom to surf through links.
+- Use Redux Thunk to fetch data.
