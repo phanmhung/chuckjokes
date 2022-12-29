@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 8px 8px;
+  gap: 32px 12px;
   margin-top: 1rem;
 }
 
@@ -43,14 +43,19 @@
   bottom: 10%;
   right: 8%;
 }
+
+.stats a:hover{
+    background-color: transparent;
+}
 .stats button {
   background-color: transparent;
   border: none;
   color: #cfb995;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   outline: none;
   cursor: pointer;
   margin-right: 0.8rem;
 }
+

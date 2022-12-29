@@ -13,8 +13,9 @@ const JokesItem = ({listJokes}) => {
                   </div>
                   <p className='text-joke'>{item.value}</p>
                   <div className='stats'>
-                    <Link to={`/jokes/${item.id}`}><button className='main__btn'>See stats</button></Link>
+                    <Link to={`/jokes/${item.id}`}><button>See stats</button>
                     <img src={require("../../assets/assets_Homework_Front-End_01/path.png")} className="main__path" alt="icon" />
+                    </Link>
                   </div>
                 </div>
             })

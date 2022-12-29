@@ -20,19 +20,21 @@ export const backgroundColor = [
   'chocolate',
 ];
 
-function Filter({ list, setSelected }) {
+function Filter({ list,selected, setSelected }) {
   const [viewAll, setViewAll] = useState(false);
   const minimalList = list.slice(0, 6);
   const listToRender = viewAll ? list : minimalList;
+  const [colorChosen, setColorChosen] = useState(backgroundColor[0]);
 
   return (
+    <>
     <div className="gridContainer">
       {listToRender.map((cat, i) => {
         return (
           <button
             type="button"
             className="btn"
-            onClick={() => setSelected(cat)}
+            onClick={() => {setSelected(cat); setColorChosen(backgroundColor[i])}}
             key={i}
             style={{ backgroundColor: backgroundColor[i] }}
           >
@@ -59,6 +61,9 @@ function Filter({ list, setSelected }) {
           )}
       </button> 
     </div>
+
+    <div className="chose-cat" style={{ backgroundColor: colorChosen }}>{selected} jokes</div>
+    </>
   );
 }
 
