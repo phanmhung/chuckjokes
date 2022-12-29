@@ -22,6 +22,8 @@ function Feed() {
       return joke.categories[0] === selected;
     });
     setJokeItem(filteredData);
+    console.log("🚀 ~ file: Feed.jsx:23 ~ filteredData ~ selected", selected)
+    console.log("🚀 ~ file: Feed.jsx:26 ~ useEffect ~ filteredData", filteredData)
   }, [selected, jokes]);
 
   useEffect(() => {
