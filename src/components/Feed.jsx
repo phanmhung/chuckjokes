@@ -15,6 +15,7 @@ function Feed() {
 
   const [jokeItem, setJokeItem] = useState(jokes);
   const [selected, setSelected] = useState(allCategories[0]);
+  
 
   useEffect(() => {
     const filteredData = jokes.filter((joke) => {
