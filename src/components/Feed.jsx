@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllJokes, getCategories } from '../redux/actions/jokeActions';
 import Filter from './Filter/Filter';
 import JokeItems from './JokeItems/JokeItems';
-import './Feed.css';
+import './Feed.scss';
 
 function Feed() {
   const dispatch = useDispatch();

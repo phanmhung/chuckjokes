@@ -1,5 +1,5 @@
 import React from 'react'
-import './Dropdown.css'
+import './Dropdown.scss'
 
 function Dropdown({show}) {
     const items = ['My saves jokes','My published jokes', 'Account Information', 'Publish new joke']

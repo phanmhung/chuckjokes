@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 import user from "../assets/assets_Homework_Front-End_01/shape@2x.png";
 import arrow from "../assets/assets_Homework_Front-End_01/path_2@2x.png";
 import Dropdown from './Dropdown/Dropdown';

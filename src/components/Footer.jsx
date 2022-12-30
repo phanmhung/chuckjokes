@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import arrowRight from "../assets/assets_Homework_Front-End_01/path-copy-2@2x.png";
 
 const Footer = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Filter.css';
+import './Filter.scss';
 import arrowDown from '../../assets/assets_Homework_Front-End_01/path-copy-7@2x.png'
 
 export const backgroundColor = [
@@ -22,7 +22,7 @@ export const backgroundColor = [
 
 function Filter({ list,selected, setSelected }) {
   const [viewAll, setViewAll] = useState(false);
-  const minimalList = list.slice(0, 6);
+  const minimalList = list ? list.slice(0, 6) :list;
   const listToRender = viewAll ? list : minimalList;
   const [colorChosen, setColorChosen] = useState(backgroundColor[0]);
 
