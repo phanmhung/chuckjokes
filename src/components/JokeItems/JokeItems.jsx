@@ -7,6 +7,7 @@ const JokesItem = ({ listJokes }) => {
   const [viewMore, setViewMore] = React.useState(true);
   const [renderJokes, setRenderJokes] = React.useState(listJokes);
   useEffect(() => {
+    if (listJokes === undefined) return;
     if (listJokes.length > 6 && viewMore) {
       setRenderJokes(listJokes.slice(0, 6));
     }
@@ -17,7 +18,9 @@ const JokesItem = ({ listJokes }) => {
       setRenderJokes(listJokes);
     }
   }, [listJokes, viewMore]);
+  console.log("🚀 ~ file: JokeItems.jsx:20 ~ JokesItem ~ listJokes", listJokes)
 
+  if (listJokes === undefined) return <></>;
   return (
     <>
       <div className="cards">

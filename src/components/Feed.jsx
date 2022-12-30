@@ -18,6 +18,7 @@ function Feed() {
   
 
   useEffect(() => {
+    if (jokes === undefined) return;
     const filteredData = jokes.filter((joke) => {
       return joke.categories[0] === selected;
     });
