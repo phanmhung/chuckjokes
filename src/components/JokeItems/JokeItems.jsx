@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './JokeItems.css';
+import './JokeItems.scss';
 import arrowDown from '../../assets/assets_Homework_Front-End_01/path-copy-7@2x.png';
 
 const JokesItem = ({ listJokes }) => {
