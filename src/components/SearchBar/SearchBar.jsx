@@ -5,7 +5,7 @@ import axios from 'axios';
 import { URL_DETAILS } from '../../utils/fetchData';
 import { useDebounce } from 'use-debounce';
 
-const SearchBar = ({ data }) => {
+const SearchBar = () => {
   const [list, setList] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const debouncedSearchQuery = useDebounce(searchQuery, 500);
@@ -21,11 +21,12 @@ const SearchBar = ({ data }) => {
     
   };
   useEffect(() => {
-    if (debouncedSearchQuery === '') {
+    console.log("🚀 ~ file: SearchBar.jsx:25 ~ useEffect ~ debouncedSearchQuery", debouncedSearchQuery)
+    if (debouncedSearchQuery[0] === "") {
       setList([]);
     }
 
-    if ((debouncedSearchQuery || '').length >= 2) {
+    if (debouncedSearchQuery[0].length >= 2) {
       getJokesBySearch(debouncedSearchQuery);
     }
   }, [debouncedSearchQuery]);
@@ -36,7 +37,7 @@ const SearchBar = ({ data }) => {
         <input
           type="text"
           placeholder="How can we make you laugh today?"
-          onChange={(e) => e.target.value.length>3 && setSearchQuery(e.target.value)}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <img src={SearchIcon} alt="search icon" className="searchIcon" />
       </div>
