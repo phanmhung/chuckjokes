@@ -12,9 +12,12 @@ const SearchBar = ({ data }) => {
 
   const getJokesBySearch = async (searchQuery) => {
     
-    const res = await axios.get(URL_DETAILS.getJokesBySearch+`${searchQuery[0]}`);
-    setList(res.data.result.slice(0,4));
-    console.log("🚀 ~ file: SearchBar.jsx:17 ~ getJokesBySearch ~ res.data.result.slice(0,4)", res.data.result.slice(0,4))
+    axios.get(URL_DETAILS.getJokesBySearch+`${searchQuery[0]}`).then(({data})=>
+    {
+      const {result} = data;
+      setList(result.slice(0,5));
+    });
+    
     
   };
   useEffect(() => {
@@ -38,13 +41,15 @@ const SearchBar = ({ data }) => {
         <img src={SearchIcon} alt="search icon" className="searchIcon" />
       </div>
       {list.length && (
-        <div className="dataResult">
+        <ul className="dataResult">
          {list.map((joke, index) => 
-            <a key={index} className="dataItem" href={joke.link}>
-              <p>{joke.value.slice(0,12)}</p>
-            </a>
+            <li key={index} className="dataItem" href={joke.link}>
+              <img src={require('../../assets/assets_Homework_Front-End_01/green-light-copy.png')} alt="" />
+              
+              <span>{joke.categories.length!==0 ? joke.categories[0] : 'Uncategorized'} Jokes: {joke.value.slice(0,24)} ...</span>
+            </li>
         )}
-        </div>
+        </ul>
       )}
     </div>
   );

@@ -28,39 +28,36 @@
 input:focus {
   background-color: white;
   outline: none;
+  .searchIcon {
+    filter: color(white);
+  }
 }
 
 .dataResult {
-  margin-top: 5px;
-  width: 300px;
-  height: 200px;
+  margin-top: 10px;
   background-color: white;
   box-shadow: black;
   overflow: hidden;
   overflow-y: auto;
+  padding: 8px;
+  border-radius: 4px;
+  li{
+    font-size: 16px;
+    color: lightslategray;
+    padding:8px;
+    display: flex;
+    align-items: center;
+    img{
+     height: 20px;
+      margin-right: 16px;
+    }
+  }
+  li:not(:last-child){
+    border-bottom: 1px solid lightgray;
+  }
+
 }
 
 .dataResult::-webkit-scrollbar {
   display: none;
-}
-
-.dataResutl .dataItem {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-
-.dataItem p {
-  margin-left: 10px;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: lightgray;
 }
